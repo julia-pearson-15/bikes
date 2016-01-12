@@ -1,0 +1,27 @@
+{
+  "name": "bikes",
+  "version": "1.0.0",
+  "description": "***Work together to create a full-stack JavaScript application***",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julia-pearson/bikes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julia-pearson/bikes/issues"
+  },
+  "homepage": "https://github.com/julia-pearson/bikes#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mongodb": "^2.1.4"
+  }
+}
