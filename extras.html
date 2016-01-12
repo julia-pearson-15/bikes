@@ -1,0 +1,34 @@
+
+
+  <link rel="stylesheet" type="text/css" href="clndr/example/styles/clndr.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="underscore/underscore.js"></script>
+  <script src="moment/moment.js"></script>
+  <script src="clndr/src/clndr.js"></script>
+
+
+   <div id="full-clndr" class="clearfix"> 
+  <script type="text/template" id="full-clndr-template">
+  <div class="clndr-<a href="http://www.jqueryscript.net/tags.php?/grid/">grid</a>">
+  <div class="days-of-the-week clearfix">
+  <% _.each(daysOfTheWeek, function(day) { %>
+  <div class="header-day"><%= day %></div>
+  <% }); %>
+  </div>
+  <div class="days clearfix">
+  <% _.each(days, function(day) { %>
+  <div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div>
+  <% }); %>
+  </div>
+  </div>
+  <div class="event-listing">
+  <div class="event-listing-title">EVENTS THIS MONTH</div>
+  <% _.each(eventsThisMonth, function(event) { %>
+  <div class="event-item">
+  <div class="event-item-name"><%= event.title %></div>
+  <div class="event-item-location"><%= event.location %></div>
+  </div>
+  <% }); %>
+  </div>
+  </script> 
+  </div>

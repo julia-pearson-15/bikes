@@ -2,25 +2,14 @@
 <html>
 <head>
   <title>Bike Calendar</title>
+  <link rel='stylesheet' href='fullcalendar/dist/fullcalendar.css' />
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src='moment/moment.js'></script>
+  <script src='fullcalendar/dist/fullcalendar.js'></script>
 </head>
 <body>
   <h1>Events Calendar</h1>
-  <div class="clndr-controls">
-    <div class="clndr-previous-button">&lsaquo;</div>
-    <div class="month"><%= month %></div>
-    <div class="clndr-next-button">&rsaquo;</div>
-  </div>
-  <div class="clndr-grid">
-      <div class="days-of-the-week">
-      <% _.each(daysOfTheWeek, function (day) { %>
-          <div class="header-day"><%= day %></div>
-      <% }); %>
-          <div class="days">
-          <% _.each(days, function (day) { %>
-              <div class="<%= day.classes %>"><%= day.day %></div>
-          <% }); %>
-          </div>
-      </div>
-  </div>
+  <div id='calendar'></div>
+  <script src="main.js"></script>
 </body>
 </html>
