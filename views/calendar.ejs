@@ -2,14 +2,38 @@
 <html>
 <head>
   <title>Bike Calendar</title>
-  <link rel='stylesheet' href='fullcalendar/dist/fullcalendar.css' />
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel='stylesheet' href='fullcalendar/dist/fullcalendar.css' />
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script src='moment/moment.js'></script>
   <script src='fullcalendar/dist/fullcalendar.js'></script>
+  <script src="handlebars.js"></script>
 </head>
 <body>
   <h1>Events Calendar</h1>
   <div id='calendar'></div>
+  <div class="modal-container event">
+    <div class="modal-content">
+      <script id="event-listing" type="x-template"> 
+        <p>{{title}}</p>
+        <p>Dates: {{start}}  {{end}}</p>
+        <p>Attendence: {{attendees}}  {{spots}}</p>
+      </script>
+      <form>
+        <h1>RSVP</h1>
+        <input name="name" placeholder="name">
+        <input name="email" placeholder="email">
+        <input type="submit">
+      </form>
+      <form>
+        <h1>Comments</h1>
+        <input name="name" placeholder="name">
+        <input name="commment" placeholder="Enter Comment here">
+        <input type="submit" name="New Comment">
+      </form>
+      <button class="close-button event">X</button>
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>

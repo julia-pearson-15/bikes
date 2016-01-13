@@ -45,7 +45,6 @@ app.get('/calendar/helmets', function(req, res){
 });
 
 app.get('/calendar/events', function(req,res){
-  console.log('ajax worked');
   db.collection('events').find({}).toArray(function(error, results){
     res.json(results);
   })

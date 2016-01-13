@@ -1,10 +1,27 @@
 
 
 $(document).ready(function() {
-
+  var eventModal = $(".modal-container.event");
+  var closeEventButton = $(".close-button.event");
+  var toggleEventsModal = function() {
+    eventModal.toggle();
+  };
+  closeEventButton.on('click', toggleEventsModal);
   $('#calendar').fullCalendar({
     eventClick: function(calEvent) {
-      alert('Event: ' + calEvent.title);
+      // var template = Handlebars.compile($("#event-listing").html());
+      // template(calEvent);
+      var modal = $('.modal-content');
+      var toAppend = $('<p>');
+      toAppend.text(calEvent.title);
+      modal.append(toAppend);
+      var toAppend = $('<p>');
+      toAppend.text(calEvent.start+'-'+calEvent.end);
+      modal.append(toAppend);
+      var toAppend = $('<p>');
+      toAppend.text(calEvent.attendees+'/'+calEvent.spots);
+      modal.append(toAppend);
+      toggleEventsModal();
     }
   });
   var source = {
